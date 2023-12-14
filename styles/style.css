@@ -41,7 +41,7 @@ html {
 
 .header {
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  font-family: var(--accent-font), 'Press Start 2P', Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font), 'Press Start 2P', fantasy;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -149,12 +149,49 @@ html {
   gap: 12px;
 }
 
+.card__icon-button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
 .card__like-button {
   background-color: transparent;
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--accent-font), 'Press Start 2P', Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font), 'Press Start 2P', fantasy;
   font-size: var(--accent-font-size, 14px);
   line-height: 90%;
   cursor: pointer;
-  padding: 9px 37px;
+  min-inline-size: 130px;
+  min-block-size: 38px;
+  padding: 9px 17px;
+}
+
+.like-icon {
+  cursor: pointer;
+}
+
+.footer {
+  margin: 50px 0 100px;
+
+}
+
+.footer__button {
+  background-color: var(--main-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-size: var(--accent-font-size, 14px);
+  line-height: 90%;
+  cursor: pointer;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column; /* изменить при ширине экрана */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.floppy-icon {
+  inline-size: var(--floppy-icon-size, 28px);
+  block-size: var(--floppy-icon-size, 28px);
 }

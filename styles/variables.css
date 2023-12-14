@@ -10,10 +10,11 @@
   --content-inline-size: 100%;
   --main-font-size: 18px;
   --accent-font-size: 14px;
+  --floppy-icon-size: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
 }
 
 @media (min-width: 768px) {
   :root {
-    --content-inline-size: clamp(23.4375rem, 16.9454rem + 27.6995vw, 41.875rem);
+    --content-inline-size: clamp(43.75rem, 52.8571rem + -10.119vw, 100%);
   }
 }
