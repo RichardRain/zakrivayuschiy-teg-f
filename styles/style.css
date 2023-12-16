@@ -16,7 +16,6 @@
 
 html {
   inline-size: 100%;
-  /* overflow: hidden; */
 }
 
 .page {
@@ -214,7 +213,6 @@ html {
 .card__icon-button {
   background-color: transparent;
   padding: 0;
-  /* border: none; */
   border: 2px solid transparent;
   transition: border 0.3s ease;
 }
@@ -238,28 +236,6 @@ html {
   max-block-size: 34px;
 }
 
-.heart {
-
-}
-
-.contour {
-  fill: var(--icon-contour-color, #000);
-}
-
-.main-body {
-  fill: none;
-}
-
-.core {
-  fill: none;
-}
-
-.sparks {
-  fill: var(--icon-fill-color, #ff0000);
-  opacity: 0;
-}
-
-
 .footer {
   margin: 50px 0 100px;
 
@@ -275,7 +251,7 @@ html {
   cursor: pointer;
   padding: 15px 20px;
   display: flex;
-  flex-direction: column; /* изменить при ширине экрана */
+  flex-direction: var(--footer-button-direction, column);
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -289,35 +265,6 @@ html {
   mix-blend-mode: difference;
 }
 
-.card__like-button::after, .footer__button::after {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: var(--accent-color, #000);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__icon-button:focus, .card__like-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color, #000);
-}
-
-.card__like-button:focus, .footer__button:focus {
-  box-shadow: 2px 2px 0px 0px var(--accent-color, #000);
-}
-
-.card__like-button:hover::after, .footer__button:hover::after {
-  transform: scaleX(1);
-}
-
 .floppy-icon {
   position: relative;
   z-index: 1;
@@ -325,4 +272,55 @@ html {
   block-size: var(--floppy-icon-size, 28px);
   color: var(--button-text-color, #fff);
   mix-blend-mode: difference;
+}
+
+.dialog {
+  position: fixed;
+  max-inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  padding-block: 30px;
+  padding-inline: clamp(1.875rem, 2.7201rem + -0.939vw, 2.5rem);
+  color: var(--accent-color, #000);
+  background-color: var(--main-color, #fff);
+  border: 2px solid var(--accent-color, #000);
+}
+
+.dialog[open]::backdrop {
+  background-color: var(--dialog-backdrop-color, rgba(0 0 0 / 0.75));
+}
+
+.dialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dialog__text-block {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  gap: 20px;
+}
+
+.dialog__text-block .floppy-icon {
+  inline-size: initial;
+  block-size: initial;
+}
+
+.dialog__text {
+  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-size: var(--accent-font-size, 14px);
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  padding: 9px 17px;
+  background-color: transparent;
+  border: 2px solid var(--accent-color, #000);
+  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-size: var(--accent-font-size, 14px);
+  line-height: 90%;
+  text-transform: uppercase;
+  min-inline-size: 257px;
+  min-block-size: 38px;
+  position: relative;
 }
