@@ -63,6 +63,10 @@ html {
   text-decoration: none;
 }
 
+.header-logo:focus {
+  outline: none;
+}
+
 .header-title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
@@ -87,12 +91,45 @@ html {
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  inline-size: 100%;
+  block-size: 2px;
+  margin-block-start: 1px;
+  background-color: var(--accent-color, #000);
+  opacity: 0.6;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  left: -1.2rem;
+  inset-inline-start: -1.3rem;
+  animation: menu-pointer 0.5s ease-in-out infinite alternate;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .main {
@@ -116,6 +153,7 @@ html {
 
 .card__image-block {
   border-block: 2px solid var(--accent-color, #000);
+  position: relative;
 }
 
 .card-image {
@@ -123,6 +161,29 @@ html {
   inline-size: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+.watermark {
+  position: absolute;
+  inset-inline-end: var(--watermark-inset-inline-end, 11px);
+  inset-block-start: 22px;
+  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-size: var(--accent-font-size, 14px);
+  mix-blend-mode: hard-light;
+  color: var(--watermark-text-color, #000);
+  text-shadow:
+    -1px 0 var(--watermark-outline-color, #fff), 
+    0 1px var(--watermark-outline-color, #fff), 
+    1px 0 var(--watermark-outline-color, #fff), 
+    0 -1px var(--watermark-outline-color, #fff);
+}
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .watermark {
+      -webkit-text-stroke: 1px var(--watermark-outline-color, #fff);
+      text-stroke: 1px var(--watermark-outline-color, #fff);
+      text-shadow: none;
+  }
 }
 
 .card-content {
@@ -146,16 +207,20 @@ html {
 .card__button-block {
   display: flex;
   justify-content: right;
-  gap: 12px;
+  gap: 5px;
+  max-block-size: 38px;
 }
 
 .card__icon-button {
   background-color: transparent;
   padding: 0;
-  border: none;
+  /* border: none; */
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .card__like-button {
+  position: relative;
   background-color: transparent;
   border: 2px solid var(--accent-color, #000);
   font-family: var(--accent-font), 'Press Start 2P', fantasy;
@@ -165,11 +230,35 @@ html {
   min-inline-size: 130px;
   min-block-size: 38px;
   padding: 9px 17px;
+  transition: box-shadow 0.3s ease;
 }
 
 .like-icon {
   cursor: pointer;
+  max-block-size: 34px;
 }
+
+.heart {
+
+}
+
+.contour {
+  fill: var(--icon-contour-color, #000);
+}
+
+.main-body {
+  fill: none;
+}
+
+.core {
+  fill: none;
+}
+
+.sparks {
+  fill: var(--icon-fill-color, #ff0000);
+  opacity: 0;
+}
+
 
 .footer {
   margin: 50px 0 100px;
@@ -177,6 +266,7 @@ html {
 }
 
 .footer__button {
+  position: relative;
   background-color: var(--main-color, #fff);
   border: 2px solid var(--accent-color, #000);
   font-family: var(--accent-font), 'Press Start 2P', fantasy;
@@ -189,9 +279,50 @@ html {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color, #fff);
+  mix-blend-mode: difference;
+}
+
+.card__like-button::after, .footer__button::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--accent-color, #000);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__icon-button:focus, .card__like-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color, #000);
+}
+
+.card__like-button:focus, .footer__button:focus {
+  box-shadow: 2px 2px 0px 0px var(--accent-color, #000);
+}
+
+.card__like-button:hover::after, .footer__button:hover::after {
+  transform: scaleX(1);
 }
 
 .floppy-icon {
+  position: relative;
+  z-index: 1;
   inline-size: var(--floppy-icon-size, 28px);
   block-size: var(--floppy-icon-size, 28px);
+  color: var(--button-text-color, #fff);
+  mix-blend-mode: difference;
 }

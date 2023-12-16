@@ -9,7 +9,11 @@
   --text-weight: 465;
   --main-color: #000;
   --accent-color: #00cc14;
-  --background-pattern: repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #000, #000 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #007f0c, #004306 100%);
+  --background-pattern: repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #000, #000 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #007f0c, #004306);
+  --watermark-outline-color: rgba(0 0 0 / 0.5);
+  --watermark-text-color: rgba(0 204 20 / 0.5);
+  --button-text-color: #00cc14;
+  --icon-contour-color: #00cc14;
 }
 
 :root.theme-light {
@@ -17,7 +21,11 @@
   --text-weight: 400;
   --main-color: #fff;
   --accent-color: #000;
-  --background-pattern: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%);
+  --background-pattern: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7 0 0.01%, #1a1a1a);
+  --watermark-outline-color: rgba(255 255 255 / 0.5);
+  --watermark-text-color: rgba(0 0 0 / 0.5);
+  --button-text-color: #fff;
+  --icon-contour-color: #000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +34,11 @@
     --text-weight: 465;
     --main-color: #000;
     --accent-color: #00cc14;
-    --background-pattern: repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #000, #000 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #007f0c, #004306 100%);
+    --background-pattern: repeating-linear-gradient(90deg, #000, #000 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #000, #000 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #007f0c, #004306);
+    --watermark-outline-color: rgba(0 0 0 / 0.5);
+    --watermark-text-color: rgba(0 204 20 / 0.5);
+    --button-text-color: #00cc14;
+    --icon-contour-color: #00cc14;
   }
 }
 
@@ -36,6 +48,10 @@
     --text-weight: 400;
     --main-color: #fff;
     --accent-color: #000;
-    --background-pattern: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%);
+    --background-pattern: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7 0 0.01%, #1a1a1a);
+    --watermark-outline-color: rgba(255 255 255 / 0.5);
+    --watermark-text-color: rgba(0 0 0 / 0.5);
+    --button-text-color: #fff;
+    --icon-contour-color: #000;
   }
 }

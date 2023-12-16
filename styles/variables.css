@@ -6,11 +6,17 @@
   --text-weight: 400;
   --main-color: #fff;
   --accent-color: #000;
-  --background-pattern: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%);
+  --background-pattern: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), repeating-linear-gradient(0, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px), linear-gradient(180deg, #e7e7e7 0 0.01%, #1a1a1a);
   --content-inline-size: 100%;
   --main-font-size: 18px;
   --accent-font-size: 14px;
   --floppy-icon-size: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
+  --watermark-outline-color: rgba(255 255 255 / 0.5);
+  --watermark-text-color: rgba(0 0 0 / 0.5);
+  --watermark-inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+  --button-text-color: #fff;
+  --icon-contour-color: #000;
+  --icon-fill-color: #ff0000;
 }
 
 @media (min-width: 768px) {
