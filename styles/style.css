@@ -22,7 +22,7 @@ html {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), Inter, Arial, Helvetica, sans-serif;
-  font-variation-settings: 'wght' var(--text-weight, 400);
+  font-variation-settings: "wght" var(--text-weight, 400);
   font-size: var(--main-font-size, 18px);
   background-color: var(--main-color, #fff);
   color: var(--accent-color, #000);
@@ -40,7 +40,7 @@ html {
 
 .header {
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-family: var(--accent-font), "Press Start 2P", fantasy;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ html {
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
   inline-size: 100%;
   block-size: 2px;
@@ -110,7 +110,7 @@ html {
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   inset-inline-start: -1.3rem;
 }
@@ -143,7 +143,7 @@ html {
 
 .card-title {
   font-size: inherit;
-  font-variation-settings: 'wght' var(--heading-weight, 700);
+  font-variation-settings: "wght" var(--heading-weight, 700);
   padding: 5px 10px;
 }
 
@@ -195,23 +195,24 @@ html {
   position: absolute;
   inset-inline-end: var(--watermark-inset-inline-end, 11px);
   inset-block-start: 22px;
-  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-family: var(--accent-font), "Press Start 2P", fantasy;
   font-size: var(--accent-font-size, 14px);
   text-align: right;
   mix-blend-mode: hard-light;
   color: var(--watermark-text-color, #000);
   text-shadow:
-    -1px 0 var(--watermark-outline-color, #fff), 
-    0 1px var(--watermark-outline-color, #fff), 
-    1px 0 var(--watermark-outline-color, #fff), 
+    -1px 0 var(--watermark-outline-color, #fff),
+    0 1px var(--watermark-outline-color, #fff),
+    1px 0 var(--watermark-outline-color, #fff),
     0 -1px var(--watermark-outline-color, #fff);
 }
 
-@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+
   .watermark {
-      -webkit-text-stroke: 1px var(--watermark-outline-color, #fff);
-      text-stroke: 1px var(--watermark-outline-color, #fff);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--watermark-outline-color, #fff);
+    text-stroke: 1px var(--watermark-outline-color, #fff);
+    text-shadow: none;
   }
 }
 
@@ -230,7 +231,7 @@ html {
 
 .card__text {
   line-height: 21px;
-  font-variation-settings: 'wght' var(--text-weight, 400);
+  font-variation-settings: "wght" var(--text-weight, 400);
 }
 
 .card__button-block {
@@ -250,7 +251,7 @@ html {
   position: relative;
   background-color: transparent;
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-family: var(--accent-font), "Press Start 2P", fantasy;
   font-size: var(--accent-font-size, 14px);
   line-height: 90%;
   cursor: pointer;
@@ -272,7 +273,7 @@ html {
   position: relative;
   background-color: var(--main-color, #fff);
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-family: var(--accent-font), "Press Start 2P", fantasy;
   font-size: var(--accent-font-size, 14px);
   line-height: 90%;
   cursor: pointer;
@@ -332,7 +333,7 @@ html {
 }
 
 .dialog__text {
-  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-family: var(--accent-font), "Press Start 2P", fantasy;
   font-size: var(--accent-font-size, 14px);
   line-height: 150%;
   text-transform: uppercase;
@@ -342,7 +343,7 @@ html {
   padding: 9px 17px;
   background-color: transparent;
   border: 2px solid var(--accent-color, #000);
-  font-family: var(--accent-font), 'Press Start 2P', fantasy;
+  font-family: var(--accent-font), "Press Start 2P", fantasy;
   font-size: var(--accent-font-size, 14px);
   line-height: 90%;
   text-transform: uppercase;
