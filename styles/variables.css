@@ -36,7 +36,7 @@
   --button-text-color: #fff;
   --icon-contour-color: #000;
   --icon-fill-color: #f00;
-  --footer-button-direction: column;
+  --section-save-button-direction: column;
   --dialog-backdrop-color: rgba(0 0 0 / 0.75);
 }
 
@@ -46,7 +46,7 @@
     --content-inline-size: clamp(43.75rem, 52.8571rem + -10.119vw, 100%);
   }
 
-  .footer__button {
-    --footer-button-direction: row;
+  .section-save__button {
+    --section-save-button-direction: row;
   }
 }
