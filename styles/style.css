@@ -90,7 +90,6 @@ html {
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -103,7 +102,6 @@ html {
   opacity: 0.6;
   transform-origin: left;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
 }
 
 .theme-menu__button:disabled {
@@ -115,7 +113,6 @@ html {
   content: '▶';
   position: absolute;
   inset-inline-start: -1.3rem;
-  animation: menu-pointer 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:hover {
@@ -151,8 +148,8 @@ html {
 }
 
 .card__image-block {
-  border-block: 2px solid var(--accent-color, #000);
   position: relative;
+  border-block: 2px solid var(--accent-color, #000);
 }
 
 .card-image {
@@ -162,12 +159,45 @@ html {
   object-fit: cover;
 }
 
+.filter-sepia {
+  filter: sepia(70%);
+}
+
+.filter-contrast {
+  filter: contrast(140%);
+}
+
+.filter-grayscale {
+  filter: grayscale(75%);
+}
+
+.filter-hue {
+  filter: hue-rotate(-60deg);
+}
+
+.filter-bright {
+  filter: brightness(125%);
+}
+
+.filter-saturate {
+  filter: saturate(160%);
+}
+
+.filter-dark {
+  filter: contrast(120%) brightness(75%);
+}
+
+.filter-colorful {
+  filter: saturate(120%) hue-rotate(-35deg);
+}
+
 .watermark {
   position: absolute;
   inset-inline-end: var(--watermark-inset-inline-end, 11px);
   inset-block-start: 22px;
   font-family: var(--accent-font), 'Press Start 2P', fantasy;
   font-size: var(--accent-font-size, 14px);
+  text-align: right;
   mix-blend-mode: hard-light;
   color: var(--watermark-text-color, #000);
   text-shadow:
@@ -214,7 +244,6 @@ html {
   background-color: transparent;
   padding: 0;
   border: 2px solid transparent;
-  transition: border 0.3s ease;
 }
 
 .card__like-button {
@@ -228,7 +257,6 @@ html {
   min-inline-size: 130px;
   min-block-size: 38px;
   padding: 9px 17px;
-  transition: box-shadow 0.3s ease;
 }
 
 .like-icon {
@@ -238,7 +266,6 @@ html {
 
 .footer {
   margin: 50px 0 100px;
-
 }
 
 .footer__button {
@@ -255,7 +282,6 @@ html {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
