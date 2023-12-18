@@ -45,3 +45,17 @@
     --section-save-button-direction: row;
   }
 }
+
+@media only screen and (orientation: landscape) {
+
+  .page {
+    background-size: auto 100%;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  
+  .page {
+    background-size: 100% auto;
+  }
+}
