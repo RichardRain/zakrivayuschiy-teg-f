@@ -35,10 +35,21 @@
   --dialog-backdrop-color: rgba(0 0 0 / 0.75);
 }
 
+@media (width < 768px) {
+  
+  .page {
+    background-attachment: scroll;
+  }
+}
+
 @media (min-width: 768px) {
 
   :root {
     --content-inline-size: clamp(43.75rem, 52.8571rem + -10.119vw, 100%);
+  }
+
+  .page {
+    background-attachment: fixed;
   }
 
   .section-save__button {

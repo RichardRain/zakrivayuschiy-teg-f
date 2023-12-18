@@ -28,7 +28,6 @@ html {
   color: var(--accent-color, #000);
   background-image: var(--background-pattern);
   background-size: cover;
-  background-attachment: fixed;
   max-inline-size: inherit;
   display: flex;
   flex-direction: column;
